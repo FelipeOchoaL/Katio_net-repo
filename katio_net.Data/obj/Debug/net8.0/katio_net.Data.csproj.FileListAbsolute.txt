@@ -1,0 +1,13 @@
+C:\Users\felip\Desktop\Nodo\Katio_net\katio_net.Data\bin\Debug\net8.0\katio_net.Data.deps.json
+C:\Users\felip\Desktop\Nodo\Katio_net\katio_net.Data\bin\Debug\net8.0\katio_net.Data.dll
+C:\Users\felip\Desktop\Nodo\Katio_net\katio_net.Data\bin\Debug\net8.0\katio_net.Data.pdb
+C:\Users\felip\Desktop\Nodo\Katio_net\katio_net.Data\obj\Debug\net8.0\katio_net.Data.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\felip\Desktop\Nodo\Katio_net\katio_net.Data\obj\Debug\net8.0\katio_net.Data.AssemblyInfoInputs.cache
+C:\Users\felip\Desktop\Nodo\Katio_net\katio_net.Data\obj\Debug\net8.0\katio_net.Data.AssemblyInfo.cs
+C:\Users\felip\Desktop\Nodo\Katio_net\katio_net.Data\obj\Debug\net8.0\katio_net.Data.csproj.CoreCompileInputs.cache
+C:\Users\felip\Desktop\Nodo\Katio_net\katio_net.Data\obj\Debug\net8.0\katio_net.Data.sourcelink.json
+C:\Users\felip\Desktop\Nodo\Katio_net\katio_net.Data\obj\Debug\net8.0\katio_net.Data.dll
+C:\Users\felip\Desktop\Nodo\Katio_net\katio_net.Data\obj\Debug\net8.0\refint\katio_net.Data.dll
+C:\Users\felip\Desktop\Nodo\Katio_net\katio_net.Data\obj\Debug\net8.0\katio_net.Data.pdb
+C:\Users\felip\Desktop\Nodo\Katio_net\katio_net.Data\obj\Debug\net8.0\ref\katio_net.Data.dll
+C:\Users\felip\Desktop\Nodo\Katio_net\katio_net.Data\obj\Debug\net8.0\katio_net.Data.csproj.AssemblyReference.cache

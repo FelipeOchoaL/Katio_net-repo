@@ -1,0 +1,16 @@
+C:\Users\felip\Desktop\Nodo\Katio_net\katio-net.Business\obj\Debug\net8.0\katio-net.Business.csproj.AssemblyReference.cache
+C:\Users\felip\Desktop\Nodo\Katio_net\katio-net.Business\obj\Debug\net8.0\katio-net.Business.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\felip\Desktop\Nodo\Katio_net\katio-net.Business\obj\Debug\net8.0\katio-net.Business.AssemblyInfoInputs.cache
+C:\Users\felip\Desktop\Nodo\Katio_net\katio-net.Business\obj\Debug\net8.0\katio-net.Business.AssemblyInfo.cs
+C:\Users\felip\Desktop\Nodo\Katio_net\katio-net.Business\obj\Debug\net8.0\katio-net.Business.csproj.CoreCompileInputs.cache
+C:\Users\felip\Desktop\Nodo\Katio_net\katio-net.Business\obj\Debug\net8.0\katio-net.Business.sourcelink.json
+C:\Users\felip\Desktop\Nodo\Katio_net\katio-net.Business\bin\Debug\net8.0\katio-net.Business.deps.json
+C:\Users\felip\Desktop\Nodo\Katio_net\katio-net.Business\bin\Debug\net8.0\katio-net.Business.dll
+C:\Users\felip\Desktop\Nodo\Katio_net\katio-net.Business\bin\Debug\net8.0\katio-net.Business.pdb
+C:\Users\felip\Desktop\Nodo\Katio_net\katio-net.Business\bin\Debug\net8.0\katio_net.Data.dll
+C:\Users\felip\Desktop\Nodo\Katio_net\katio-net.Business\bin\Debug\net8.0\katio_net.Data.pdb
+C:\Users\felip\Desktop\Nodo\Katio_net\katio-net.Business\obj\Debug\net8.0\katio-ne.D6483FC1.Up2Date
+C:\Users\felip\Desktop\Nodo\Katio_net\katio-net.Business\obj\Debug\net8.0\katio-net.Business.dll
+C:\Users\felip\Desktop\Nodo\Katio_net\katio-net.Business\obj\Debug\net8.0\refint\katio-net.Business.dll
+C:\Users\felip\Desktop\Nodo\Katio_net\katio-net.Business\obj\Debug\net8.0\katio-net.Business.pdb
+C:\Users\felip\Desktop\Nodo\Katio_net\katio-net.Business\obj\Debug\net8.0\ref\katio-net.Business.dll

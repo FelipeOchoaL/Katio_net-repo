@@ -1,0 +1,34 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.0.31903.59
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "katio_net.API", "katio_net.API\katio_net.API.csproj", "{D2F2DA04-E79B-4A48-B905-14EA7F012F3C}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "katio-net.Business", "katio-net.Business\katio-net.Business.csproj", "{E62B7009-1F75-4EDC-A496-C118D6C02BEC}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "katio_net.Data", "katio_net.Data\katio_net.Data.csproj", "{26473D8E-92E8-4D32-AE98-6B9975CFFA1E}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{D2F2DA04-E79B-4A48-B905-14EA7F012F3C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D2F2DA04-E79B-4A48-B905-14EA7F012F3C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D2F2DA04-E79B-4A48-B905-14EA7F012F3C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D2F2DA04-E79B-4A48-B905-14EA7F012F3C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E62B7009-1F75-4EDC-A496-C118D6C02BEC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E62B7009-1F75-4EDC-A496-C118D6C02BEC}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E62B7009-1F75-4EDC-A496-C118D6C02BEC}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E62B7009-1F75-4EDC-A496-C118D6C02BEC}.Release|Any CPU.Build.0 = Release|Any CPU
+		{26473D8E-92E8-4D32-AE98-6B9975CFFA1E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{26473D8E-92E8-4D32-AE98-6B9975CFFA1E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{26473D8E-92E8-4D32-AE98-6B9975CFFA1E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{26473D8E-92E8-4D32-AE98-6B9975CFFA1E}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+EndGlobal
