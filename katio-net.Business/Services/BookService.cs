@@ -43,32 +43,54 @@ public class BookService : IBookService
         return Utilities.Utilities.BuildResponse<Books>(HttpStatusCode.OK, BaseMessageStatus.OK_200, new List<Books>{newBook});
     }
 
-    public async Task<IEnumerable<Books>> GetAllBooks()
+    public async Task<BaseMessage<Books>> GetAllBooks()
     {
-        var bookList = Utilities.Utilities.CreateABooksList();
-        return bookList;
+        var result = _context.Books.ToList();
+        return result.Any() ? Utilities.Utilities.BuildResponse<Books>(HttpStatusCode.OK, BaseMessageStatus.OK_200, result):
+            Utilities.Utilities.BuildResponse(HttpStatusCode.NotFound, BaseMessageStatus.BOOK_NOT_FOUND, new List<Books>());
+
     }
 
-    public async Task<IEnumerable<Books>> GetById(int id)
+    public async Task<BaseMessage<Books>> GetById(int id)
     {
-        var list = Utilities.Utilities.CreateABooksList();
-        var ById = list.Where(x => x.Id == id);
-        return ById;
+        var result = _context.Books.Where(x => x.Id == id).ToList();
+        return result.Any() ? Utilities.Utilities.BuildResponse<Books>(HttpStatusCode.OK, BaseMessageStatus.OK_200, result):
+            Utilities.Utilities.BuildResponse(HttpStatusCode.NotFound, BaseMessageStatus.BOOK_NOT_FOUND, new List<Books>());
     }
 
-    public async Task<IEnumerable<Books>> GetByName(string name)
+    public async Task<BaseMessage<Books>> GetByName(string Title)
     {
-        var FindTitle = Utilities.Utilities.CreateABooksList()
-        .Where(x => x.Title.Contains(name, StringComparison.InvariantCultureIgnoreCase));
-        return FindTitle;
+        var result = _context.Books.Where(x => x.Title.Contains(Title, StringComparison.InvariantCultureIgnoreCase)).ToList();
+        return result.Any() ? Utilities.Utilities.BuildResponse<Books>(HttpStatusCode.OK, BaseMessageStatus.OK_200, result):
+            Utilities.Utilities.BuildResponse(HttpStatusCode.NotFound, BaseMessageStatus.BOOK_NOT_FOUND, new List<Books>());;
     }
 
-    public async Task<IEnumerable<Books>> Update(Books book)
+    public async Task<BaseMessage<Books>> Update(int Id, Books book)
     {
-        var ByUpdate = Utilities.Utilities.CreateABooksList();
-        return ByUpdate;
-        
+        var existingBook = _context.Books.FirstOrDefault(x => x.Id == Id);
+        if (existingBook == null)
+        {
+            return Utilities.Utilities.BuildResponse(HttpStatusCode.NotFound, BaseMessageStatus.BOOK_NOT_FOUND, new List<Books>());
+        }
+        existingBook.Title = book.Title;
+        existingBook.ISBN10 = book.ISBN10;
+        existingBook.ISBN13 = book.ISBN13;
+        existingBook.Published = book.Published;
+        existingBook.Edition = book.Edition;
+        existingBook.DeweyIndex = book.DeweyIndex;
+
+        _context.Books.Update(existingBook);
+        await _context.SaveChangesAsync();
+
+        return Utilities.Utilities.BuildResponse<Books>(HttpStatusCode.OK, BaseMessageStatus.OK_200, new List<Books>{existingBook});
     }
+
+    // public async Task<IEnumerable<Books>> Update(Books book)
+    // {
+    //     var ByUpdate = Utilities.Utilities.CreateABooksList();
+    //     return ByUpdate;
+
+    // }
 
     // public async Task<IEnumerable<Books>> SearchByTitle(String Title)
     // {
