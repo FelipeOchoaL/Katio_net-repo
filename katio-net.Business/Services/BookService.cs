@@ -84,17 +84,4 @@ public class BookService : IBookService
 
         return Utilities.Utilities.BuildResponse<Books>(HttpStatusCode.OK, BaseMessageStatus.OK_200, new List<Books>{existingBook});
     }
-
-    // public async Task<IEnumerable<Books>> Update(Books book)
-    // {
-    //     var ByUpdate = Utilities.Utilities.CreateABooksList();
-    //     return ByUpdate;
-
-    // }
-
-    // public async Task<IEnumerable<Books>> SearchByTitle(String Title)
-    // {
-    //     var result = _books.Where(books => books.Title.Contains(Title, StringComparison.OrdinalIgnoreCase));
-    //     return await Task.FromResult(result);
-    // }
 }
