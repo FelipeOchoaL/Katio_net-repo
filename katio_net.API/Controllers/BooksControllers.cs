@@ -47,4 +47,12 @@ public class BooksController : ControllerBase
         var response = await _bookService.Update(book);
         return response.Count() > 0 ? Ok(response) : StatusCode(StatusCodes.Status404NotFound, "No lo consegui");
     }
+
+    [HttpPost]
+    [Route("Create")]
+    public async Task<IActionResult> Create(Books books)
+    {
+        var response = await _bookService.CreateBook(books)
+        return response
+    }
 }

@@ -1,6 +1,7 @@
 using System.Collections.Generic;
 using System.Threading.Tasks;
 using Katio.Data.Models;
+using Katio.Data.Dto;
 
 namespace Katio.Business.Interface;
 
@@ -14,6 +15,6 @@ public interface IBookService
     public Task<IEnumerable<Books>> GetByName(String Title);
     //Update
     public Task<IEnumerable<Books>> Update(Books book);
-     
+    Task<BaseMessage<Books>> CreateBook(Books books);   
 };
 
