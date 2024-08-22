@@ -8,13 +8,13 @@ namespace Katio.Business.Interface;
 public interface IBookService
 {
     //Obtener todos los libros
-    public Task<IEnumerable<Books>>GetAllBooks();
+    public Task<BaseMessage<Books>>GetAllBooks();//ya
     //Obtener por ID
-    public Task<IEnumerable<Books>>GetById(int id);
+    public Task<BaseMessage<Books>>GetById(int id);//ya
     //Obtener por el titulo
-    public Task<IEnumerable<Books>> GetByName(String Title);
+    public Task<BaseMessage<Books>> GetByName(String Title);//ya
     //Update
-    public Task<IEnumerable<Books>> Update(Books book);
+    public Task<BaseMessage<Books>> Update(int Id, Books book);
     Task<BaseMessage<Books>> CreateBook(Books books);   
 };
 
