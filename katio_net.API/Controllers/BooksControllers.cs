@@ -21,7 +21,7 @@ public class BooksController : ControllerBase
     public async Task<IActionResult> Index()
     {
         var response = await _bookService.GetAllBooks();
-        return response.Count() > 0 ? Ok(response) : StatusCode(StatusCodes.Status204NoContent, "No lo consegui");
+        return response.TotalElements > 0 ? Ok(response) : StatusCode(StatusCodes.Status404NotFound, response);
     }
 
     [HttpGet]
@@ -29,7 +29,7 @@ public class BooksController : ControllerBase
     public async Task<ActionResult> GetById(int id)
     {
         var response = await _bookService.GetById(id);
-        return response.Count() > 0 ? Ok(response) : StatusCode(StatusCodes.Status404NotFound, "No lo consegui");
+        return response.TotalElements > 0 ? Ok(response) : StatusCode(StatusCodes.Status404NotFound, "No lo consegui");
     }
 
     [HttpGet]
@@ -37,22 +37,23 @@ public class BooksController : ControllerBase
     public async Task<IActionResult> GetByName(string name)
     {
         var response = await _bookService.GetByName(name);
-        return response.Count() > 0 ? Ok(response) : StatusCode(StatusCodes.Status404NotFound, "No lo consegui");
+        return response.TotalElements > 0 ? Ok(response) : StatusCode(StatusCodes.Status404NotFound, "No lo consegui");
     }
 
     [HttpPost]
     [Route("Update")]
-    public async Task<IActionResult> Update(Books book)
+    public async Task<IActionResult> Update(int Id, Books book)
     {
-        var response = await _bookService.Update(book);
-        return response.Count() > 0 ? Ok(response) : StatusCode(StatusCodes.Status404NotFound, "No lo consegui");
+        var response = await _bookService.Update(Id, book);
+        return response.TotalElements > 0 ? Ok(response) : StatusCode(StatusCodes.Status404NotFound, "No lo consegui");
     }
 
     [HttpPost]
     [Route("Create")]
     public async Task<IActionResult> Create(Books books)
     {
-        var response = await _bookService.CreateBook(books)
-        return response
+        var response = await _bookService.CreateBook(books);
+        return response.StatusCode == System.Net.HttpStatusCode.OK ? Ok(response) : 
+            StatusCode((int)response.StatusCode, response);
     }
 }
