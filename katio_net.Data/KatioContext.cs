@@ -11,5 +11,6 @@ public class KatioContext : DbContext
 
     }
     public DbSet<Books> Books{get; set;} = null;
+    public DbSet<Author> Author{get; set;} = null;
 
 }
