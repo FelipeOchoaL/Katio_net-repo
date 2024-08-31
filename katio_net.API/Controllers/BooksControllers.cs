@@ -41,6 +41,14 @@ public class BooksController : ControllerBase
     }
 
     [HttpPost]
+    [Route("GetByAuthorsName")]
+    public async Task<IActionResult> GetByAuthorsName(string name)
+    {
+        var response = await _bookService.GetByAuthor(name);
+        return response.TotalElements > 0 ? Ok(response) : StatusCode(StatusCodes.Status404NotFound, "No se lo consegui");
+    }
+
+    [HttpPost]
     [Route("Update")]
     public async Task<IActionResult> Update(int Id, Books book)
     {
