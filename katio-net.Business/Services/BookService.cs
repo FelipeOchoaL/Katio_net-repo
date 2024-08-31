@@ -28,7 +28,8 @@ public class BookService : IBookService
             ISBN13 = books.ISBN13,
             Published = books.Published,
             Edition = books.Edition,
-            DeweyIndex = books.DeweyIndex
+            DeweyIndex = books.DeweyIndex,
+            AuthorId = books.AuthorId
         };
         try
         {
@@ -64,7 +65,20 @@ public class BookService : IBookService
         return result.Any() ? Utilities.Utilities.BuildResponse<Books>(HttpStatusCode.OK, BaseMessageStatus.OK_200, result):
             Utilities.Utilities.BuildResponse(HttpStatusCode.NotFound, BaseMessageStatus.BOOK_NOT_FOUND, new List<Books>());;
     }
-
+    public async Task<BaseMessage<Books>> GetByAuthor(string name)
+    {
+        var bookList = await _context.Books
+        .Where(x => x.Author.Name.Contains(name, StringComparison.InvariantCultureIgnoreCase))
+        .ToListAsync();
+        return bookList.Any() ? Utilities.Utilities.BuildResponse(HttpStatusCode.OK, BaseMessageStatus.OK_200, bookList) :
+            Utilities.Utilities.BuildResponse(HttpStatusCode.NotFound, BaseMessageStatus.BOOK_NOT_FOUND, new List<Books>());
+    }
+    public async Task<BaseMessage<Books>> GetByAuthor(int AuthorId)
+    {
+        var bookList = await _context.Books.Where(x => x.AuthorId == AuthorId).ToListAsync();
+        return bookList.Any() ? Utilities.Utilities.BuildResponse(HttpStatusCode.OK, BaseMessageStatus.OK_200, bookList) :
+            Utilities.Utilities.BuildResponse(HttpStatusCode.NotFound, BaseMessageStatus.BOOK_NOT_FOUND, new List<Books>());
+    }
     public async Task<BaseMessage<Books>> Update(int Id, Books book)
     {
         var existingBook = _context.Books.FirstOrDefault(x => x.Id == Id);
@@ -84,4 +98,6 @@ public class BookService : IBookService
 
         return Utilities.Utilities.BuildResponse<Books>(HttpStatusCode.OK, BaseMessageStatus.OK_200, new List<Books>{existingBook});
     }
+
+
 }

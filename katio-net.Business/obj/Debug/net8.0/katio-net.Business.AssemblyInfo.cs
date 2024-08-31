@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("katio-net.Business")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+8281ca404ab05d08aa33d13464dcb713d51af507")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+635f169b3467201038634b4dfb7a4aef0182814d")]
 [assembly: System.Reflection.AssemblyProductAttribute("katio-net.Business")]
 [assembly: System.Reflection.AssemblyTitleAttribute("katio-net.Business")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
